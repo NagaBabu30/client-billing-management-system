@@ -1,0 +1,228 @@
+/* ===== PAGE ===== */
+
+.pay-invoice-page {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  padding: 40px 20px;
+
+}
+
+
+/* ===== CARD ===== */
+
+.pay-invoice-card {
+
+  width: 420px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  border: 1px solid #e5e7eb;
+
+  padding: 24px;
+
+}
+
+
+/* ===== TITLE ===== */
+
+.pay-invoice-card h2 {
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+
+  color: #111827;
+
+}
+
+
+/* ===== SUMMARY ===== */
+
+.invoice-summary {
+
+  background: #f9fafb;
+
+  border-radius: 8px;
+
+  padding: 14px;
+
+  margin-bottom: 20px;
+
+}
+
+.invoice-summary p {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 14px;
+
+  margin: 6px 0;
+
+  color: #374151;
+
+}
+
+.invoice-summary .balance {
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  color: #111827;
+
+}
+
+
+/* ===== FORM ===== */
+
+.payment-form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+}
+
+
+/* ===== LABEL ===== */
+
+.payment-form label {
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #374151;
+
+}
+
+
+/* ===== INPUT ===== */
+
+.payment-form input {
+
+  padding: 10px 12px;
+
+  border-radius: 6px;
+
+  border: 1px solid #d1d5db;
+
+  font-size: 14px;
+
+}
+
+.payment-form input:focus {
+
+  outline: none;
+
+  border-color: #10b981;
+
+  box-shadow: 0 0 0 2px rgba(16,185,129,0.15);
+
+}
+
+
+/* ===== SELECT ===== */
+
+.payment-form select {
+
+  padding: 10px 12px;
+
+  border-radius: 6px;
+
+  border: 1px solid #d1d5db;
+
+  font-size: 14px;
+
+}
+
+.payment-form select:focus {
+
+  outline: none;
+
+  border-color: #10b981;
+
+}
+
+
+/* ===== BUTTON ===== */
+
+.payment-form button {
+
+  margin-top: 8px;
+
+  padding: 11px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  background: #10b981;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+.payment-form button:hover {
+
+  background: #059669;
+
+}
+
+
+/* ===== PAID MESSAGE ===== */
+
+.paid-message {
+
+  font-size: 14px;
+
+  color: #059669;
+
+  font-weight: 500;
+
+}
+
+
+/* ===== LOADING ===== */
+
+.loading {
+
+  font-size: 14px;
+
+  color: #374151;
+
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .pay-invoice-card {
+
+    width: 100%;
+
+  }
+
+}

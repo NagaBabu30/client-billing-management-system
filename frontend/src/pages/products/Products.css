@@ -1,0 +1,415 @@
+/* ============================= */
+/* PRODUCTS PAGE */
+/* ============================= */
+
+.products-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 28px;
+  height: 100%;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.products-page h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  color: #0ea5e9;
+}
+
+/* ============================= */
+/* TOOLBAR */
+/* ============================= */
+
+.products-page .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+/* ============================= */
+/* SEARCH */
+/* ============================= */
+
+/* ===== Clients Style Search for Products ===== */
+
+.products-page .search-box {
+  position: relative;
+  width: 100%;
+  max-width: 230px;
+  margin: 0;              /* ✅ remove vertical margin */
+  flex-shrink: 0;
+}
+
+.products-page .search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 45px 0 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.products-page .search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.products-page .search-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #6b7280;
+}
+/* ============================= */
+/* ADD BUTTON */
+/* ============================= */
+
+.products-page .btn-primary {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.products-page .btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* ============================= */
+/* TABLE CONTAINER */
+/* ============================= */
+
+.products-page .table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* 🔥 Glass Effect Added */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.products-page .table-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+.products-page table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.products-page th:nth-child(1) { width: 24%; }
+.products-page th:nth-child(2) { width: 18%; }
+.products-page th:nth-child(3) { width: 16%; }
+.products-page th:nth-child(4) { width: 18%; }
+.products-page th:nth-child(5) { width: 20%; }
+
+/* ============================= */
+/* TABLE HEADER */
+/* ============================= */
+
+.products-page table thead {
+  background-color: #e0f2fe !important;
+}
+
+.products-page table thead th {
+  background-color: #e0f2fe !important;
+  color: #0c4a6e !important;
+  border-bottom: 2px solid #bae6fd;
+  padding: 14px;
+  text-align: left;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.products-page table thead th:last-child {
+  border-right: none;
+}
+
+/* ============================= */
+/* TABLE BODY */
+/* ============================= */
+
+.products-page tbody td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #000000;
+  white-space: normal;
+  word-break: break-word;
+  border-right: 1px solid #e5e7eb;
+}
+
+.products-page tbody td:last-child {
+  border-right: none;
+}
+
+.products-page tbody tr:hover {
+  background: #f9fafb;
+}
+
+.products-page th:nth-child(3),
+.products-page td:nth-child(3),
+.products-page th:nth-child(4),
+.products-page td:nth-child(4) {
+  text-align: center;
+}
+
+/* ============================= */
+/* ACTION BUTTONS (UPDATED ONLY) */
+/* ============================= */
+
+.products-page td button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* EDIT - BLUE */
+.products-page td button:first-child {
+  color: #2563eb;
+}
+
+.products-page td button:first-child:hover {
+  background: #e2e8f0;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* DELETE - RED */
+.products-page td button:last-child {
+  color: #dc2626;
+}
+
+.products-page td button:last-child:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+/* ============================= */
+/* MODAL OVERLAY */
+/* ============================= */
+
+.products-page .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* ============================= */
+/* MODAL BOX */
+/* ============================= */
+
+.products-page .modal {
+  width: 520px;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* ============================= */
+/* FORM */
+/* ============================= */
+
+.products-page .form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+/* Prevent overflow issue */
+.products-page .form > * {
+  min-width: 0;
+}
+
+.products-page .form input {
+  height: 45px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+}
+
+.products-page .form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ============================= */
+/* SAVE BUTTON */
+/* ============================= */
+
+.products-page .form button {
+  grid-column: span 2;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.products-page .form button:hover {
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* INPUT GROUP WITH ICON SUPPORT */
+/* ============================= */
+
+/* ============================= */
+/* IMPROVED MODAL INPUTS */
+/* ============================= */
+
+.products-page .form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px 0 46px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #f1f5f9;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.products-page .form input:hover {
+  background: #e2e8f0;
+}
+
+.products-page .form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(173, 173, 173, 0.15);
+}
+
+/* ============================= */
+/* COLORFUL ICONS */
+/* ============================= */
+
+.products-page .input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Product - Blue */
+.products-page .input-group:nth-child(1) .input-icon {
+  color: #2563eb;
+}
+
+/* Price - Green */
+.products-page .input-group:nth-child(2) .input-icon {
+  color: #16a34a;
+}
+
+/* Tax - Orange */
+.products-page .input-group:nth-child(3) .input-icon {
+  color: #f59e0b;
+}
+
+/* Discount - Purple */
+.products-page .input-group:nth-child(4) .input-icon {
+  color: #9333ea;
+}
+
+/* ============================= */
+/* BUTTON GROUP FIX */
+/* ============================= */
+
+.products-page .btn-group {
+  grid-column: span 2;
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.products-page .save-btn,
+.products-page .cancel-btn {
+  flex: 1;
+  height: 48px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Add Product */
+.products-page .save-btn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.products-page .save-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Cancel */
+.products-page .cancel-btn {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.products-page .cancel-btn:hover {
+  background: #d1d5db;
+}

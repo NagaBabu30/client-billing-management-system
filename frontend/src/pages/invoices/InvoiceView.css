@@ -1,0 +1,335 @@
+/* ===== PAGE CONTAINER ===== */
+/* IMPORTANT: NO BACKGROUND HERE */
+/* Layout.css already provides main background */
+
+.invoice-page {
+
+  padding: 0;
+
+  min-height: 100%;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+}
+
+
+/* ===== MAIN INVOICE CARD ===== */
+
+.invoice-card {
+
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  border: 1px solid #e5e7eb;
+
+  padding: 24px;
+
+}
+
+
+/* ===== HEADER ===== */
+
+.invoice-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+}
+
+.invoice-header h2 {
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #111827;
+
+  margin: 0;
+
+}
+
+
+/* ===== STATUS BADGE (FIXED SMALL SIZE) ===== */
+
+.invoice-page .status {
+
+  display: inline-block;
+
+  padding: 2px 8px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  border-radius: 6px;
+
+  margin-top: 4px;
+
+  width: fit-content;
+
+  white-space: nowrap;
+
+}
+
+
+/* STATUS COLORS */
+
+.invoice-page .status.PAID {
+
+  background: #dcfce7;
+
+  color: #166534;
+
+}
+
+.invoice-page .status.UNPAID {
+
+  background: #fee2e2;
+
+  color: #991b1b;
+
+}
+
+.invoice-page .status.PARTIAL {
+
+  background: #fef3c7;
+
+  color: #92400e;
+
+}
+
+
+/* ===== DOWNLOAD BUTTON ===== */
+
+.invoice-header button {
+
+  padding: 8px 16px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  background: #10b981;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+.invoice-header button:hover {
+
+  background: #059669;
+
+}
+
+
+/* ===== SECTIONS ===== */
+
+.invoice-section {
+
+  margin-bottom: 16px;
+
+}
+
+.invoice-section h3 {
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #374151;
+
+  margin-bottom: 6px;
+
+}
+
+.invoice-section p {
+
+  font-size: 14px;
+
+  color: #4b5563;
+
+  margin: 2px 0;
+
+}
+
+
+/* ===== TABLE ===== */
+
+.invoice-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 20px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+}
+
+
+/* TABLE HEADER */
+
+.invoice-table th {
+
+  background: #f9fafb;
+
+  padding: 12px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  color: #374151;
+
+  border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+/* TABLE CELLS */
+
+.invoice-table td {
+
+  padding: 12px;
+
+  font-size: 14px;
+
+  color: #111827;
+
+  border-bottom: 1px solid #f1f5f9;
+
+}
+
+
+/* PRODUCT LEFT ALIGN */
+
+.invoice-table th:first-child,
+.invoice-table td:first-child {
+
+  text-align: left;
+
+}
+
+
+/* ROW HOVER */
+
+.invoice-table tbody tr:hover {
+
+  background: #f9fafb;
+
+}
+
+
+/* ===== SUMMARY CARD ===== */
+
+.invoice-summary {
+
+  margin-top: 20px;
+
+  margin-left: auto;
+
+  width: 320px;
+
+  background: #f9fafb;
+
+  border-radius: 8px;
+
+  padding: 14px;
+
+  border: 1px solid #e5e7eb;
+
+}
+
+.invoice-summary p {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 14px;
+
+  margin: 4px 0;
+
+}
+
+.invoice-summary .balance {
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  color: #111827;
+
+}
+
+
+/* ===== LOADING ===== */
+
+.loading {
+
+  padding: 20px;
+
+  font-size: 14px;
+
+  color: #6b7280;
+
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .invoice-card {
+
+    padding: 16px;
+
+  }
+
+  .invoice-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+  }
+
+  .invoice-summary {
+
+    width: 100%;
+
+  }
+
+}
+

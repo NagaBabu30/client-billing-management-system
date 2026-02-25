@@ -1,0 +1,234 @@
+/* ===== PAGE CONTAINER (NO MAIN SCROLL) ===== */
+.create-invoice-page {
+  padding: 28px;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== TITLE ===== */
+.create-invoice-page h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #2563eb;
+}
+
+/* ===== CLIENT SELECT ===== */
+.create-invoice-page > select {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: 0.25s ease;
+}
+
+.create-invoice-page > select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== TABLE ===== */
+.create-invoice-page .invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 4px 12px rgba(0,0,0,0.04);
+  table-layout: fixed;
+}
+
+/* ===== HEADER ===== */
+.create-invoice-page .invoice-table th {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== CELLS ===== */
+.create-invoice-page .invoice-table td {
+  padding: 12px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ===== PRODUCT LEFT ALIGN ===== */
+.create-invoice-page .invoice-table th:first-child,
+.create-invoice-page .invoice-table td:first-child {
+  text-align: left;
+}
+
+/* ===== LONG PRODUCT NAME FIX ===== */
+.create-invoice-page .invoice-table td:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+/* ===== ROW HOVER ===== */
+.create-invoice-page .invoice-table tbody tr:hover {
+  background: #eff6ff;
+}
+
+/* ===== SELECT ===== */
+.create-invoice-page .invoice-table select {
+  width: 100%;
+  padding: 7px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+}
+
+.create-invoice-page .invoice-table select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+}
+
+/* ===== INPUT ===== */
+.create-invoice-page .invoice-table input {
+  width: 70px;
+  padding: 6px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.create-invoice-page .invoice-table input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ===== DELETE BUTTON (UPDATED LIKE CLIENTS/PRODUCTS) ===== */
+.create-invoice-page .delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #dc2626;
+  transition: all 0.2s ease;
+}
+
+.create-invoice-page .delete-btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+/* ===== ADD PRODUCT BUTTON ===== */
+.create-invoice-page > button:first-of-type {
+  margin-top: 18px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-invoice-page > button:first-of-type:hover {
+  box-shadow: 0 6px 14px rgba(37,99,235,0.3);
+}
+
+/* ===== SUMMARY CARD ===== */
+.create-invoice-page .invoice-summary {
+  margin-top: 25px;
+  margin-left: auto;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.create-invoice-page .invoice-summary h3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: #1d4ed8;
+}
+
+/* ===== CREATE BUTTON ===== */
+.create-invoice-page button:last-of-type {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-invoice-page button:last-of-type:hover {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .create-invoice-page {
+    padding: 18px;
+  }
+
+  .create-invoice-page .invoice-summary {
+    width: 100%;
+  }
+}
+/* ================================= */
+/* TABLE BORDER ALIGNMENT IMPROVEMENT */
+/* ================================= */
+
+/* Vertical column lines */
+.create-invoice-page .invoice-table th,
+.create-invoice-page .invoice-table td {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Remove last column vertical line */
+.create-invoice-page .invoice-table th:last-child,
+.create-invoice-page .invoice-table td:last-child {
+  border-right: none;
+}
+
+/* Horizontal row lines */
+.create-invoice-page .invoice-table tbody td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Remove last row bottom border */
+.create-invoice-page .invoice-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Center align Action column perfectly */
+.create-invoice-page .invoice-table th:last-child,
+.create-invoice-page .invoice-table td:last-child {
+  text-align: center;
+  width: 80px;
+}
+
+/* Delete button perfectly centered */
+.create-invoice-page .delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
