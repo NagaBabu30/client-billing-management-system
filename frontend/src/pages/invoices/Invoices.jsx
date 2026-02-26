@@ -146,7 +146,7 @@ return (
                   <td>{inv.client?.name || "-"}</td>
                   <td>{inv.issueDate}</td>
                   <td>{inv.dueDate}</td>
-                  <td>₹ {inv.totalAmount}</td>
+                  <td>₹ {Number(inv.totalAmount).toLocaleString("en-IN")}</td>
 
                   <td>
                     <span className={`status ${inv.status.toLowerCase()}`}>

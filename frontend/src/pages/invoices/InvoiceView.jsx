@@ -20,6 +20,12 @@ export default function InvoiceView() {
   const { user } = useAuth();
   const [invoice, setInvoice] = useState(null);
 
+  // ✅ ADDED: Currency Formatter (Indian Format)
+  const formatCurrency = (amount) => {
+    if (!amount) return "0";
+    return Number(amount).toLocaleString("en-IN");
+  };
+
   useEffect(() => {
     loadInvoice();
   }, []);
@@ -50,9 +56,7 @@ export default function InvoiceView() {
           : await downloadInvoicePdf(id);
 
       const blob = new Blob([res.data], { type: "application/pdf" });
-
       const url = window.URL.createObjectURL(blob);
-
       window.open(url);
 
     } catch (err) {
@@ -143,10 +147,10 @@ export default function InvoiceView() {
 
                 <tr key={item.id}>
 
-                  {/* FIXED PRODUCT NAME */}
                   <td>{item.product?.name || "-"}</td>
 
-                  <td>₹{item.price}</td>
+                  {/* ✅ UPDATED WITH COMMAS */}
+                  <td>₹{formatCurrency(item.price)}</td>
 
                   <td>{item.tax}%</td>
 
@@ -154,7 +158,8 @@ export default function InvoiceView() {
 
                   <td>{item.quantity}</td>
 
-                  <td>₹{item.total}</td>
+                  {/* ✅ UPDATED WITH COMMAS */}
+                  <td>₹{formatCurrency(item.total)}</td>
 
                 </tr>
 
@@ -179,17 +184,17 @@ export default function InvoiceView() {
 
           <p>
             <span>Total Amount:</span>
-            <span>₹{invoice.totalAmount}</span>
+            <span>₹{formatCurrency(invoice.totalAmount)}</span>
           </p>
 
           <p>
             <span>Paid Amount:</span>
-            <span>₹{invoice.paidAmount}</span>
+            <span>₹{formatCurrency(invoice.paidAmount)}</span>
           </p>
 
           <p className="balance">
             <span>Balance:</span>
-            <span>₹{invoice.balance}</span>
+            <span>₹{formatCurrency(invoice.balance)}</span>
           </p>
 
         </div>
@@ -199,4 +204,3 @@ export default function InvoiceView() {
     </div>
   );
 }
-

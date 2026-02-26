@@ -10,22 +10,16 @@
 
 
 /* ============================= */
-/* GLASS CARD (MAIN LAYER) */
+/* GLASS CARD */
 /* ============================= */
 
-.invoices-card{
-
+.invoices-page .invoices-card{
   background:rgba(255,255,255,0.15);
-
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
-
   border-radius:18px;
-
   padding:24px;
-
   border:1px solid rgba(255,255,255,0.25);
-
   box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 
@@ -34,20 +28,20 @@
 /* HEADER */
 /* ============================= */
 
-.page-header{
+.invoices-page .page-header{
   display:flex;
   flex-direction:column;
   gap:4px;
 }
 
-.page-header h2{
+.invoices-page .page-header h2{
   font-size:26px;
   font-weight:600;
   margin:0;
   color:#0ea5e9;
 }
 
-.page-subtitle{
+.invoices-page .page-subtitle{
   color:#64748b;
   font-size:14px;
 }
@@ -57,7 +51,7 @@
 /* TOOLBAR */
 /* ============================= */
 
-.toolbar{
+.invoices-page .toolbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -70,12 +64,12 @@
 /* SEARCH */
 /* ============================= */
 
-.search-box{
+.invoices-page .search-box{
   position:relative;
   width:240px;
 }
 
-.search-icon{
+.invoices-page .search-icon{
   position:absolute;
   right:12px;
   height:40px;
@@ -85,25 +79,22 @@
   color:#64748b;
 }
 
-.search-input,
-.status-select{
-
+.invoices-page .search-input,
+.invoices-page .status-select{
   height:40px;
   padding:0 14px;
-
   border-radius:8px;
   border:1px solid #d1d5db;
-
   background:#ffffff;
-
   font-size:14px;
 }
 
-.search-input{
+.invoices-page .search-input{
   width:100%;
 }
 
-.search-input:focus{
+.invoices-page .search-input:focus,
+.invoices-page .status-select:focus{
   outline:none;
   border-color:#2563eb;
 }
@@ -113,31 +104,16 @@
 /* TABLE CONTAINER */
 /* ============================= */
 
-/* ============================= */
-/* TABLE CONTAINER */
-/* ============================= */
-
-.table-container{
-
+.invoices-page .table-container{
   margin-top:18px;
-
   max-height:500px;
   overflow:auto;
-
   scrollbar-width:none;
-
-  /* ⭐ CLIENTS LIKE LAYER EFFECT */
-  background:rgba(255,255,255,0.92);
-
-  border-radius:14px;
-
-  border:1px solid rgba(0,0,0,0.06);
-
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
-
+  background: transparent;   /* 🔥 Important */
+  border-radius:12px;
 }
 
-.table-container::-webkit-scrollbar{
+.invoices-page .table-container::-webkit-scrollbar{
   width:0;
   height:0;
 }
@@ -147,7 +123,7 @@
 /* TABLE */
 /* ============================= */
 
-.invoices-table{
+.invoices-page .invoices-table{
   width:100%;
   border-collapse:collapse;
   table-layout:fixed;
@@ -158,63 +134,55 @@
 /* TABLE HEADER */
 /* ============================= */
 
-.invoices-table thead th{
-
-  background:#e0f2fe;
-  color:#0c4a6e;
-
+/* ===== SKY BLUE HEADER ===== */
+.invoices-page .invoices-table thead th{
+  background:#0ea5e9;
+  color:#ffffff;
   padding:14px;
   text-align:left;
-
-  border-bottom:2px solid #bae6fd;
-
+  border-bottom:1px solid #38bdf8;
   position:sticky;
   top:0;
   z-index:5;
 }
 
-
 /* ============================= */
 /* TABLE BODY */
 /* ============================= */
 
-.invoices-table tbody td{
-
+.invoices-page .invoices-table tbody td{
   padding:14px;
   font-size:14px;
-
-  border-bottom:1px solid #eeeeee;
-
+  border-bottom:1px solid rgba(255,255,255,0.25);;
   color:#000;
-
   word-break:break-word;
 }
 
 
 /* COLUMN LINES */
 
-.invoices-table th,
-.invoices-table td{
+.invoices-page .invoices-table th,
+.invoices-page .invoices-table td{
   border-right:1px solid #e5e7eb;
 }
 
-.invoices-table th:last-child,
-.invoices-table td:last-child{
+.invoices-page .invoices-table th:last-child,
+.invoices-page .invoices-table td:last-child{
   border-right:none;
 }
 
 
 /* ROW HOVER */
 
-.invoices-table tbody tr:hover{
+.invoices-page .invoices-table tbody tr:hover{
   background:#f8fafc;
 }
 
 
 /* ACTION COLUMN */
 
-.invoices-table thead th:last-child,
-.invoices-table tbody td:last-child{
+.invoices-page .invoices-table thead th:last-child,
+.invoices-page .invoices-table tbody td:last-child{
   text-align:center;
   width:110px;
 }
@@ -224,24 +192,24 @@
 /* STATUS */
 /* ============================= */
 
-.status{
+.invoices-page .status{
   padding:4px 10px;
   border-radius:12px;
   font-size:12px;
   font-weight:600;
 }
 
-.status.paid{
+.invoices-page .status.paid{
   background:#dcfce7;
   color:#16a34a;
 }
 
-.status.unpaid{
+.invoices-page .status.unpaid{
   background:#fee2e2;
   color:#dc2626;
 }
 
-.status.partial{
+.invoices-page .status.partial{
   background:#fef9c3;
   color:#ca8a04;
 }
@@ -251,13 +219,13 @@
 /* ACTION BUTTONS */
 /* ============================= */
 
-.actions{
+.invoices-page .actions{
   display:flex;
   justify-content:center;
   gap:10px;
 }
 
-.icon-btn{
+.invoices-page .icon-btn{
   border:none;
   background:transparent;
   font-size:16px;
@@ -267,11 +235,11 @@
   transition:.2s;
 }
 
-.view-btn{color:#2563eb;}
-.pay-btn{color:#16a34a;}
-.delete-btn{color:#dc2626;}
+.invoices-page .view-btn{color:#2563eb;}
+.invoices-page .pay-btn{color:#16a34a;}
+.invoices-page .delete-btn{color:#dc2626;}
 
-.icon-btn:hover{
+.invoices-page .icon-btn:hover{
   transform:scale(1.1);
   background:#e2e8f0;
 }
@@ -281,7 +249,7 @@
 /* NO DATA */
 /* ============================= */
 
-.no-data{
+.invoices-page .no-data{
   text-align:center;
   padding:24px;
   color:#64748b;

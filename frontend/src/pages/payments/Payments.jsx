@@ -56,6 +56,10 @@ export default function Payments() {
   const formatInvoiceNo = (id) =>
     `INV-${String(id).padStart(3, "0")}`;
 
+  // ✅ Currency Formatter Added
+  const formatCurrency = (amount) =>
+    "₹ " + Number(amount).toLocaleString("en-IN");
+
   const filteredPayments = payments.filter(p => {
     return (
       formatInvoiceNo(p.invoiceId)
@@ -146,12 +150,12 @@ export default function Payments() {
                 filteredPayments.map((p) => (
                   <tr key={p.id}>
                     <td>{formatInvoiceNo(p.invoiceId)}</td>
-                    <td>₹{p.amount}</td>
+                    <td>{formatCurrency(p.amount)}</td>
                     <td>{p.paymentMode}</td>
                     <td>{p.paymentDate}</td>
                     <td>
-                       <span className={`status ${p.status}`}>
-                         {p.status}
+                      <span className={`status ${p.status}`}>
+                        {p.status}
                       </span>
                     </td>
                   </tr>
@@ -206,11 +210,11 @@ export default function Payments() {
                       <td>{formatInvoiceNo(inv.id)}</td>
                       <td>{inv.client?.name}</td>
                       <td className="balance-due">
-                        ₹{inv.balance}
+                        {formatCurrency(inv.balance)}
                       </td>
                       <td>
                         <span className={`status ${inv.status}`}>
-                           {inv.status}
+                          {inv.status}
                         </span>
                       </td>
                     </tr>

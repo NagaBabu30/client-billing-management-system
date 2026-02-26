@@ -48,6 +48,14 @@ export default function CreateInvoice() {
     }
   };
 
+  // ✅ Currency formatter (Indian format)
+  const formatCurrency = (amount) => {
+    return amount.toLocaleString("en-IN", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  };
+
   const handleProductChange = (index, productId) => {
     const product = products.find(p => p.id === Number(productId));
     if (!product) return;
@@ -180,7 +188,7 @@ export default function CreateInvoice() {
                 </select>
               </td>
 
-              <td>{it.price}</td>
+              <td>₹ {formatCurrency(it.price)}</td>
               <td>{it.discount}</td>
               <td>{it.tax}</td>
 
@@ -193,7 +201,7 @@ export default function CreateInvoice() {
                 />
               </td>
 
-              <td>{calculateItemTotal(it).toFixed(2)}</td>
+              <td>₹ {formatCurrency(calculateItemTotal(it))}</td>
 
               <td>
                 {items.length > 1 && (
@@ -210,19 +218,17 @@ export default function CreateInvoice() {
         </tbody>
       </table>
 
-      {/* ✅ Added proper class */}
       <button className="add-product-btn" onClick={addItem}>
         + Add Product
       </button>
 
       <div className="invoice-summary">
-        <p>Subtotal: ₹ {subtotal.toFixed(2)}</p>
-        <p>Discount: ₹ {totalDiscount.toFixed(2)}</p>
-        <p>Tax: ₹ {totalTax.toFixed(2)}</p>
-        <h3>Grand Total: ₹ {grandTotal.toFixed(2)}</h3>
+        <p>Subtotal: ₹ {formatCurrency(subtotal)}</p>
+        <p>Discount: ₹ {formatCurrency(totalDiscount)}</p>
+        <p>Tax: ₹ {formatCurrency(totalTax)}</p>
+        <h3>Grand Total: ₹ {formatCurrency(grandTotal)}</h3>
       </div>
 
-      {/* ✅ Added proper class */}
       <button
         className="create-invoice-btn"
         onClick={submitInvoice}

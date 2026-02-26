@@ -217,7 +217,7 @@ export default function Products() {
               .map((p) => (
                 <tr key={p.id}>
                   <td>{p.name}</td>
-                  <td>{p.price}</td>
+                  <td>₹ {p.price.toLocaleString("en-IN")}</td>
                   <td>{p.tax}</td>
                   <td>{p.discount}</td>
                   <td className="action-cell">

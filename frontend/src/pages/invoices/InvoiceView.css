@@ -192,6 +192,35 @@
   overflow: hidden;
 
 }
+/* ============================= */
+/* FULL TABLE GRID LINES */
+/* ============================= */
+
+/* Add vertical lines */
+.invoice-table th,
+.invoice-table td {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Remove last column right border */
+.invoice-table th:last-child,
+.invoice-table td:last-child {
+  border-right: none;
+}
+
+/* Strong horizontal lines */
+.invoice-table th {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoice-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Remove last row bottom border */
+.invoice-table tbody tr:last-child td {
+  border-bottom: none;
+}
 
 
 /* TABLE HEADER */

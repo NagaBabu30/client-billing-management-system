@@ -147,28 +147,35 @@
 
 /* Balanced Column Widths (only added this) */
 
-.clients-page th:nth-child(1) { width: 22%; }
-.clients-page th:nth-child(2) { width: 34%; }
-.clients-page th:nth-child(3) { width: 20%; }
-.clients-page th:nth-child(4) { width: 26%; }
-.clients-page th:nth-child(5) { width: 20%; }
-.clients-page th:nth-child(6) { width: 10%; }
-
+.clients-page th:nth-child(1) { width: 18%; }
+.clients-page th:nth-child(2) { width: 28%; }
+.clients-page th:nth-child(3) { width: 18%; }
+.clients-page th:nth-child(4) { width: 18%; }
+.clients-page th:nth-child(5) { width: 12%; }
+.clients-page th:nth-child(6) { width: 6%; }
 /* TABLE HEADER */
 
 .clients-page table thead {
   background-color: #e0f2fe !important;
 }
 
+/* ===== SKY BLUE HEADER - PRODUCTS ===== */
+
 .clients-page table thead th {
-  background-color: #e0f2fe !important;
-  color: #0c4a6e !important;
-  border-bottom: 2px solid #bae6fd;
+  background: #0ea5e9;
+  color: #ffffff;
   padding: 14px;
   text-align: left;
+  border-bottom: 2px solid #38bdf8;
+  border-right: 1px solid rgba(255,255,255,0.2);
   position: sticky;
   top: 0;
   z-index: 5;
+}
+
+/* Remove last column right border */
+.clients-page table thead th:last-child {
+  border-right: none;
 }
 
 
