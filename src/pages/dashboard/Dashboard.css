@@ -1,0 +1,96 @@
+/* ============================= */
+/* DASHBOARD */
+/* ============================= */
+
+.dashboard {
+  color: #0f172a;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.dashboard .dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard .dashboard-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.dashboard .dashboard-subtitle {
+  margin-top: 6px;
+  color: #64748b; /* corrected shade */
+  font-size: 14px;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.dashboard .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.dashboard .stat-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+
+.dashboard .stat-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+}
+
+/* ============================= */
+/* ICON */
+/* ============================= */
+
+.dashboard .stat-icon {
+  font-size: 20px;
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.dashboard .stat-title {
+  font-size: 13px;
+  color: #64748b;  /* corrected */
+}
+
+.dashboard .stat-value {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ============================= */
+/* HIGHLIGHT CARD */
+/* ============================= */
+
+.dashboard .stat-card.highlight {
+  border: 1px solid #22c55e;
+  background: #f0fdf4;
+}

@@ -1,0 +1,106 @@
+/* ============================= */
+/* ROOT */
+/* ============================= */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* ============================= */
+/* APP CONTAINER */
+/* ============================= */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  min-height: 100vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* ============================= */
+/* PAGE CONTAINER (GLASS) */
+/* ============================= */
+.page-container {
+  width: 100%;
+  max-width: 950px;
+  margin: 40px 0;
+  padding: 28px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+
+  color: #ffffff;
+}
+
+/* PAGE HEADER */
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-header h1,
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #e2e8f0;
+  margin-top: 4px;
+}
+
+/* COMMON CARD */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* BASE BUTTON */
+button {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+}

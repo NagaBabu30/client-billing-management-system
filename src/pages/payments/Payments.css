@@ -1,0 +1,251 @@
+/* ===== PAGE CONTAINER ===== */
+.payments-page {
+  padding: 20px;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* ===== TITLE ===== */
+.payments-page h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+
+  color: #0ea5e9;   /* 🌤 sky blue */
+}
+
+
+/* ===== SUBTITLE ===== */
+.payments-page h3 {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #0ea5e9;   /* 🌤 sky blue */
+}
+
+
+/* ===== TABLE ===== */
+.payments-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border: none;
+
+  table-layout: fixed;   /* 🔥 ADD THIS LINE */
+}
+
+
+/* ===== TABLE HEADER ===== */
+.payments-page th {
+  background: #0ea5e9;
+  color: #ffffff;
+  padding: 14px;
+  text-align: left;
+  border-bottom: 2px solid #38bdf8;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* Remove last column right border */
+.payments-page table thead th:last-child {
+  border-right: none;
+}
+
+/* ===== TABLE CELLS ===== */
+.payments-page td {
+
+  padding: 11px 12px;
+
+  font-size: 14px;
+
+  color: #111827;
+
+  border-bottom: 1px solid #f1f5f9;
+
+}
+
+
+/* ===== ROW HOVER ===== */
+.payments-page tbody tr:hover {
+
+  background: #ffffff;;
+color: #0c4a6e;
+
+}
+
+
+/* ===== STATUS BADGE BASE ===== */
+.payments-page .status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ===== SUCCESS / PAID ===== */
+.payments-page .status.SUCCESS,
+.payments-page .status.PAID {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* ===== UNPAID / FAILED ===== */
+.payments-page .status.UNPAID,
+.payments-page .status.FAILED {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===== PENDING / PARTIAL ===== */
+.payments-page .status.PENDING,
+.payments-page .status.PARTIAL {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+/* ===== EMPTY STATE ===== */
+.payments-page td[colspan] {
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .payments-page table {
+
+    font-size: 13px;
+
+  }
+
+  .payments-page th,
+  .payments-page td {
+
+    padding: 10px;
+
+  }
+
+}
+/* ===== SCROLL FOR BOTH TABLES ===== */
+/* ===== FORCE SCROLL FOR BOTH TABLES ===== */
+/* ===== GLASS TABLE CONTAINER ===== */
+.payments-page .table-card {
+  height: 320px;
+  overflow-y: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* 🔥 Glass Effect Like Clients */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Hide scrollbar */
+.payments-page .table-card::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* ===== FILTER BAR PERFECT ALIGNMENT ===== */
+.payments-page .filter-bar {
+  display: flex;
+  align-items: center;   /* 🔥 vertical alignment */
+  gap: 12px;
+  flex-wrap: nowrap;     /* same row lo undali */
+  margin-bottom: 18px;
+}
+
+/* All filter inputs same height */
+.payments-page .filter-bar input {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+/* ===== SMALL SIZE FOR MIN MAX BOXES ===== */
+.payments-page .filter-bar input[type="number"] {
+  width: 120px;   /* small clean size */
+}
+
+/* Date boxes medium */
+.payments-page .filter-bar input[type="date"] {
+  width: 150px;
+}
+
+/* If using search-box wrapper */
+.payments-page .search-box {
+  position: relative;
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.payments-page .search-box input {
+  width: 100%;
+  height: 38px;
+  padding: 0 36px 0 12px;
+}
+
+.payments-page .search-box .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+/* ===== TABLE GRID LINES ===== */
+.payments-page table th,
+.payments-page table td {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Remove last column right border */
+.payments-page table th:last-child,
+.payments-page table td:last-child {
+  border-right: none;
+}
+
+/* Strong horizontal line */
+.payments-page table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+/* ===== PREVENT TEXT OVERFLOW ===== */
+.payments-page th,
+.payments-page td {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+/* ===== INDUSTRY TEXT CONTROL ===== */
+.payments-page td,
+.payments-page th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.payments-page tbody tr {
+  transition: 0.2s ease;
+}
+/* ===== AMOUNT COLUMN ALIGN ===== */
+.payments-page th:nth-child(1) { width: 12%; }
+.payments-page th:nth-child(2) { width: 18%; }
+.payments-page th:nth-child(3) { width: 16%; }
+.payments-page th:nth-child(4) { width: 18%; }
+.payments-page th:nth-child(5) { width: 20%; }

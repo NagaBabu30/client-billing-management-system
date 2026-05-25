@@ -1,0 +1,256 @@
+/* ============================= */
+/* INVOICES PAGE */
+/* ============================= */
+
+.invoices-page{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+
+/* ============================= */
+/* GLASS CARD */
+/* ============================= */
+
+.invoices-page .invoices-card{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,0.25);
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.invoices-page .page-header{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.invoices-page .page-header h2{
+  font-size:26px;
+  font-weight:600;
+  margin:0;
+  color:#0ea5e9;
+}
+
+.invoices-page .page-subtitle{
+  color:#64748b;
+  font-size:14px;
+}
+
+
+/* ============================= */
+/* TOOLBAR */
+/* ============================= */
+
+.invoices-page .toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+
+/* ============================= */
+/* SEARCH */
+/* ============================= */
+
+.invoices-page .search-box{
+  position:relative;
+  width:240px;
+}
+
+.invoices-page .search-icon{
+  position:absolute;
+  right:12px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  pointer-events:none;
+  color:#64748b;
+}
+
+.invoices-page .search-input,
+.invoices-page .status-select{
+  height:40px;
+  padding:0 14px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  background:#ffffff;
+  font-size:14px;
+}
+
+.invoices-page .search-input{
+  width:100%;
+}
+
+.invoices-page .search-input:focus,
+.invoices-page .status-select:focus{
+  outline:none;
+  border-color:#2563eb;
+}
+
+
+/* ============================= */
+/* TABLE CONTAINER */
+/* ============================= */
+
+.invoices-page .table-container{
+  margin-top:18px;
+  max-height:500px;
+  overflow:auto;
+  scrollbar-width:none;
+  background: transparent;   /* 🔥 Important */
+  border-radius:12px;
+}
+
+.invoices-page .table-container::-webkit-scrollbar{
+  width:0;
+  height:0;
+}
+
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+.invoices-page .invoices-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+
+/* ============================= */
+/* TABLE HEADER */
+/* ============================= */
+
+/* ===== SKY BLUE HEADER ===== */
+.invoices-page .invoices-table thead th{
+  background:#0ea5e9;
+  color:#ffffff;
+  padding:14px;
+  text-align:left;
+  border-bottom:1px solid #38bdf8;
+  position:sticky;
+  top:0;
+  z-index:5;
+}
+
+/* ============================= */
+/* TABLE BODY */
+/* ============================= */
+
+.invoices-page .invoices-table tbody td{
+  padding:14px;
+  font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,0.25);;
+  color:#000;
+  word-break:break-word;
+}
+
+
+/* COLUMN LINES */
+
+.invoices-page .invoices-table th,
+.invoices-page .invoices-table td{
+  border-right:1px solid #e5e7eb;
+}
+
+.invoices-page .invoices-table th:last-child,
+.invoices-page .invoices-table td:last-child{
+  border-right:none;
+}
+
+
+/* ROW HOVER */
+
+.invoices-page .invoices-table tbody tr:hover{
+  background:#f8fafc;
+}
+
+
+/* ACTION COLUMN */
+
+.invoices-page .invoices-table thead th:last-child,
+.invoices-page .invoices-table tbody td:last-child{
+  text-align:center;
+  width:110px;
+}
+
+
+/* ============================= */
+/* STATUS */
+/* ============================= */
+
+.invoices-page .status{
+  padding:4px 10px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.invoices-page .status.paid{
+  background:#dcfce7;
+  color:#16a34a;
+}
+
+.invoices-page .status.unpaid{
+  background:#fee2e2;
+  color:#dc2626;
+}
+
+.invoices-page .status.partial{
+  background:#fef9c3;
+  color:#ca8a04;
+}
+
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.invoices-page .actions{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.invoices-page .icon-btn{
+  border:none;
+  background:transparent;
+  font-size:16px;
+  padding:8px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.invoices-page .view-btn{color:#2563eb;}
+.invoices-page .pay-btn{color:#16a34a;}
+.invoices-page .delete-btn{color:#dc2626;}
+
+.invoices-page .icon-btn:hover{
+  transform:scale(1.1);
+  background:#e2e8f0;
+}
+
+
+/* ============================= */
+/* NO DATA */
+/* ============================= */
+
+.invoices-page .no-data{
+  text-align:center;
+  padding:24px;
+  color:#64748b;
+}

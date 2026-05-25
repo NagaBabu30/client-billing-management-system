@@ -1,0 +1,430 @@
+/* ============================= */
+/* CLIENTS PAGE */
+/* ============================= */
+
+.clients-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.clients-page .page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clients-page .page-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  color: #0ea5e9;
+  letter-spacing: 0.3px;
+}
+
+.clients-page .page-header .page-subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb !important;
+}
+
+/* ============================= */
+/* TOOLBAR */
+/* ============================= */
+
+.clients-page .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+/* ============================= */
+/* SEARCH BAR */
+/* ============================= */
+
+.clients-page .search-box {
+  position: relative;
+  width: 230px;
+  flex-shrink: 0;
+}
+
+.clients-page .search-input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 42px 0 14px;   /* proper spacing for icon */
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.clients-page .search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.clients-page .search-icon {
+  position: absolute;
+  right: 12px;
+
+  height: 38px;              /* match input height */
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;
+
+  font-size: 15px;
+  color: #64748b;
+
+  pointer-events: none;
+}
+
+/* ============================= */
+/* ADD BUTTON */
+/* ============================= */
+
+.clients-page .add-btn {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clients-page .add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ============================= */
+/* TABLE CONTAINER */
+/* ============================= */
+.clients-page .table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* 🔥 Glass Effect Added */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.clients-page .table-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+.clients-page table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Balanced Column Widths (only added this) */
+
+.clients-page th:nth-child(1) { width: 18%; }
+.clients-page th:nth-child(2) { width: 28%; }
+.clients-page th:nth-child(3) { width: 18%; }
+.clients-page th:nth-child(4) { width: 18%; }
+.clients-page th:nth-child(5) { width: 12%; }
+.clients-page th:nth-child(6) { width: 6%; }
+/* TABLE HEADER */
+
+.clients-page table thead {
+  background-color: #e0f2fe !important;
+}
+
+/* ===== SKY BLUE HEADER - PRODUCTS ===== */
+
+.clients-page table thead th {
+  background: #0ea5e9;
+  color: #ffffff;
+  padding: 14px;
+  text-align: left;
+  border-bottom: 2px solid #38bdf8;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* Remove last column right border */
+.clients-page table thead th:last-child {
+  border-right: none;
+}
+
+
+/* TABLE BODY */
+
+.clients-page tbody td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #eeeeee;
+  color: #000000;
+
+  /* Updated for proper wrapping */
+  white-space: normal;
+  word-break: break-word;
+}
+/* Vertical column lines */
+.clients-page table th,
+.clients-page table td {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Remove right border from last column */
+.clients-page table th:last-child,
+.clients-page table td:last-child {
+  border-right: none;
+}
+
+.clients-page tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ALIGN LAST COLUMN */
+
+.clients-page thead th:last-child,
+.clients-page tbody td:last-child {
+  text-align: center;
+  width: 100px;
+}
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.clients-page .action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.clients-page .edit-btn {
+  color: #2563eb;
+}
+
+.clients-page .delete-btn {
+  color: #dc2626;
+}
+
+.clients-page .action-btn:hover {
+  opacity: 0.7;
+}
+
+/* ============================= */
+/* MODAL OVERLAY */
+/* ============================= */
+
+.clients-page .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* ============================= */
+/* MODAL BOX */
+/* ============================= */
+
+.clients-page .modal {
+  width: 520px;
+  max-width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: modalFade 0.25s ease;
+}
+
+.clients-page .modal h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ============================= */
+/* FORM LAYOUT */
+/* ============================= */
+
+.clients-page .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* INPUT GROUP */
+
+.clients-page .input-group {
+  position: relative;
+  width: 100%;
+}
+
+.clients-page .input-group span {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.clients-page .input-group input {
+  width: 100%;
+  height: 45px;
+  padding: 0 14px 0 42px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.clients-page .input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.clients-page .input-group.full {
+  grid-column: 1 / -1;
+}
+
+/* ============================= */
+/* BUTTON GROUP */
+/* ============================= */
+
+.clients-page .btn-group {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Common Button Style */
+.clients-page .save-btn,
+.clients-page .cancel-btn {
+  flex: 1;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Save Button */
+.clients-page .save-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.clients-page .save-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+/* Cancel */
+/* Cancel Button */
+.clients-page .cancel-btn {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.clients-page .cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ============================= */
+/* ACTION BUTTON HOVER EFFECT */
+/* ============================= */
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.clients-page .action-btn {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ============================= */
+/* EDIT BUTTON - BLUE */
+/* ============================= */
+
+.clients-page .edit-btn {
+  color: #2563eb;
+}
+
+.clients-page .edit-btn:hover {
+  background: #e2e8f0;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* ============================= */
+/* DELETE BUTTON - RED */
+/* ============================= */
+
+.clients-page .delete-btn {
+  color: #dc2626;
+}
+
+.clients-page .delete-btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
